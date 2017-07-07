@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BlogMainController {
 	@RequestMapping("/main")
 	public String mainPage(){
-		return "main";
+		return "blog_index";
 	}
 }
