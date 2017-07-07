@@ -115,11 +115,11 @@
 							<a href="/index/titleinfo/id/5" target="_blank" title="关于博主">
 								关于博主 </a>
 						</h3>
-						<p>个人资料： 女，九零后，IT女，狮子座，IT界最不着调的程序员 爱好 ： 写文字、</p>
+						<p>个人资料：半路“出家”到JAVA圈，爱看BUG，不爱搭框架的程序猿 </p>
 					</section>
 					<section class=" text02 ">
 						<h3>
-							<a href="/index/titleinfo/id/121" target="_blank" title="关于友情链接">
+							<a href="/index/titleinfo/id/121" target="_blank" title="">
 								关于友情链接 </a>
 						</h3>
 						<p>申请叶子博客网站的友情链接童鞋们： 申请步骤如下： 1、首先在贵站做好叶子博客的</p>
