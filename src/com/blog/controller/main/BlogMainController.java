@@ -26,6 +26,7 @@ public class BlogMainController {
 		return "blog_index";
 	}
 	
+	@SuppressWarnings("rawtypes")
 	@RequestMapping("/getTopTewBlog")
 	public ModelAndView getTopNewBlog(HttpServletRequest request,
 	         HttpServletResponse response) throws Exception {
@@ -34,6 +35,11 @@ public class BlogMainController {
 		//∑µªÿmodelAndView
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("blogList", blogList);
+		
+		/*modelAndView.addObject("blogList", blogList);
+		modelAndView.addObject("blogList", blogList);
+		modelAndView.addObject("blogList", blogList);
+		request.setAttribute("dd", blogList);*/
 		//÷∏∂® ‘Õº
 		modelAndView.setViewName("blog_index");
 		return modelAndView;
