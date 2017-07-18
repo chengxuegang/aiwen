@@ -14,5 +14,12 @@ public class BlogDetailService {
 	public RMap getBlogDetail(String blogId) throws Exception{
 		return detailDao.getBLogDetail(blogId);
 	}
+	public void updateBlogCountByBlogId(String blogId) throws Exception {
+		this.detailDao.updateBlogCountByBlogId(blogId);
+		
+	}
+	public void saveIp(RMap ipMap) throws Exception{
+		detailDao.saveIp(ipMap);
+	}
 
 }

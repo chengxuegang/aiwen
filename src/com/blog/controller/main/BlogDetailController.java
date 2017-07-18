@@ -1,5 +1,7 @@
 package com.blog.controller.main;
 
+import java.sql.Timestamp;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -30,6 +32,17 @@ public class BlogDetailController {
 		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("blogDetail" , blogDetail);
+		
+		//更新点击次数
+		this.detailService.updateBlogCountByBlogId(blogId);
+		
+		//保存访问的IP地址
+		String ip=request.getRemoteAddr().toString();
+		
+		RMap<String, Object> ipMap = new RMap<String, Object>();
+		ipMap.put("ip", ip);
+		ipMap.put("viewTime", new Timestamp(System.currentTimeMillis()));
+		this.detailService.saveIp(ipMap);
 		
 		//指定试图
 		modelAndView.setViewName("/detail/blog_detail");

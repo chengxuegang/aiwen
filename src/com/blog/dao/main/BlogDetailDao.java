@@ -1,5 +1,7 @@
 package com.blog.dao.main;
 
+import java.sql.Timestamp;
+
 import org.rex.DB;
 import org.rex.RMap;
 import org.rex.db.Ps;
@@ -18,6 +20,23 @@ public class BlogDetailDao {
 		ps.add(blogId);
 		
 		return DB.getMap(PublicParam.DATA_SOURCE_ID,sql.toString(), ps);
+	}
+
+	public void updateBlogCountByBlogId(String blogId) throws DBException{
+		String sql = " UPDATE T_BLOG SET BLOG_COUNT = BLOG_COUNT+1 WHERE BLOG_ID = ?" ;
+		Ps ps  = new Ps();
+		ps.add(blogId);
+		DB.update(PublicParam.DATA_SOURCE_ID, sql, ps);
+		
+	}
+
+	public void saveIp(RMap ipMap) throws DBException{
+		StringBuilder sql = new StringBuilder();
+		sql.append(" INSERT INTO BLOG_VIEW_IP (VIEW_TIME, IP) VALUES (?, ?)");
+		Ps ps = new Ps();
+		ps.add(new Timestamp(System.currentTimeMillis()));
+		ps.add(ipMap.getString("ip"));
+		DB.update(PublicParam.DATA_SOURCE_ID, sql.toString(), ps);
 	}
 
 }

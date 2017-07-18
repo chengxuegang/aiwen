@@ -73,10 +73,10 @@
 		<div class="news_content">
 	  	   	<p>${blogDetail.blogContent }</p>
 <p style="text-indent:2em;" align="center">
-	<img src="https://static.yezismile.com/kindeditor/attached/image/20170718/20170718005541_40610.jpeg" alt="" /> 
+	<img src="${blogDetail.blogImage }" alt="" /> 
 </p></p>
 			 
-			<p>本文出处：<a href="${pageContext.request.contextPath }/blog/detail.do?blogId=${blogDetail.blogId }" target="_self">https://www.yezismile.com/index/titleinfo/id/431</a></p>
+			<p>本文出处：<a href="${pageContext.request.contextPath }/blog/detail.do?blogId=${blogDetail.blogId }" target="_self">http://www.aiwen123.cn${pageContext.request.contextPath }/blog/detail.do?blogId=${blogDetail.blogId }</a></p>
 	  	</div>
 		<!-- 分享+点赞 S -->
 		<div class="w_share clearfix">
