@@ -138,15 +138,15 @@
 				<c:forEach items="${blogList}" var="blog">
 					<div class="blogs" >
 					<figure>
-							<a href="/index/titleinfo/id/index.do?bid=${blog.blogId }" title="${blog.blogTitle }" target="_blank">
-								<img src="${pageContext.request.contextPath}/image/${blog.blogImage}"
-								original="${pageContext.request.contextPath}/image/${blog.blogImage}"
+							<a href="${pageContext.request.contextPath}/blog/detail.do?blogId=${blog.blogId }" title="${blog.blogTitle }" target="_blank">
+								<img src="${blog.blogImage}"
+								original="${blog.blogImage}"
 								style="width: 167.5px; height: 137px;" alt="${blog.blogLabel }">
 							</a>
 						</figure>
 						<ul>
 							<h3>
-								<a href="/index/titleinfo/id/${blog.blogId }" title="${blog.blogTitle }"
+								<a href="${pageContext.request.contextPath}/blog/detail.do?blogId=${blog.blogId }" title="${blog.blogTitle }"
 									target="_blank">${blog.blogTitle }</a>
 							</h3>
 							<p class="content">
@@ -260,18 +260,14 @@
 			<div class="tit01">
 				<h3>最新文章</h3>
 				<ul class="smile_rank" style="">
-					<li><a href="/index/titleinfo/id/427" target="_blank"
-						title="vagrant环境问题的记录">vagrant环境问题的记录</a></li>
-					<li><a href="/index/titleinfo/id/426" target="_blank"
-						title="上传图片旋转问题">上传图片旋转问题</a></li>
-					<li><a href="/index/titleinfo/id/430" target="_blank"
-						title="phpqrcode生成二维码">phpqrcode生成二维码</a></li>
-					<li><a href="/index/titleinfo/id/424" target="_blank"
-						title="模拟朋友圈数据存储原理">模拟朋友圈数据存储原理</a></li>
-					<li><a href="/index/titleinfo/id/423" target="_blank"
-						title="雪一直下">雪一直下</a></li>
-					<li><a href="/index/titleinfo/id/422" target="_blank"
-						title="年年岁岁又一年">年年岁岁又一年</a></li>
+					<c:forEach items="${blogList}" var="blog" varStatus="st">
+						<li>
+							<c:if test="${st.index<5 }">
+							<a href="/index/titleinfo/id/${blog.blogId }" target="_blank" 
+								title="${blog.blogTitle }">${blog.blogTitle }</a>
+							</c:if>
+						</li>
+					</c:forEach>
 				</ul>
 			</div>
 			<div class="moreSelect" id="lp_right_select">
@@ -288,56 +284,43 @@
 				<div class="ms-main" id="ms-main">
 					<div style="display: block;" class="bd bd-news" id="bd1">
 						<ul>
-							<li><a href="/index/titleinfo/id/387" target="_blank"
-								title="6月8日">6月8日</a></li>
-							<li><a href="/index/titleinfo/id/121" target="_blank"
-								title="关于友情链接">关于友情链接</a></li>
-							<li><a href="/index/titleinfo/id/5" target="_blank"
-								title="关于博主">关于博主</a></li>
-							<li><a href="/index/titleinfo/id/395" target="_blank"
-								title="云中谁寄锦书来">云中谁寄锦书来</a></li>
-							<li><a href="/index/titleinfo/id/6" target="_blank"
-								title="关于博客">关于博客</a></li>
-							<li><a href="/index/titleinfo/id/336" target="_blank"
-								title="叶子博客2.0上线">叶子博客2.0上线</a></li>
+							<c:forEach items="${topClick}" var="blog">
+								<li>
+									<a href="/index/titleinfo/id/${blog.blogId }" target="_blank" title="${blog.blogTitle }">
+										${blog.blogTitle }
+									</a>
+								</li>
+							</c:forEach>
 						</ul>
 					</div>
 					<div class="bd bd-news" id="bd2">
 						<ul>
-							<li><a href="/index/titleinfo/id/427" target="_blank"
-								title="vagrant环境问题的记录">vagrant环境问题的记录</a></li>
-							<li><a href="/index/titleinfo/id/426" target="_blank"
-								title="上传图片旋转问题">上传图片旋转问题</a></li>
-							<li><a href="/index/titleinfo/id/430" target="_blank"
-								title="phpqrcode生成二维码">phpqrcode生成二维码</a></li>
-							<li><a href="/index/titleinfo/id/424" target="_blank"
-								title="模拟朋友圈数据存储原理">模拟朋友圈数据存储原理</a></li>
-							<li><a href="/index/titleinfo/id/423" target="_blank"
-								title="雪一直下">雪一直下</a></li>
-							<li><a href="/index/titleinfo/id/422" target="_blank"
-								title="年年岁岁又一年">年年岁岁又一年</a></li>
+							<c:forEach items="${blogList}" var="blog" varStatus="st">
+								<li>
+									<c:if test="${st.index<6 }">
+									<a href="/index/titleinfo/id/${blog.blogId }" target="_blank" 
+										title="${blog.blogTitle }">${blog.blogTitle }</a>
+									</c:if>
+								</li>
+							</c:forEach>
 						</ul>
 					</div>
 					<div class="bd bd-news" id="bd3">
 						<ul>
-							<li><a href="/index/titleinfo/id/427" target="_blank"
-								title="vagrant环境问题的记录">vagrant环境问题的记录</a></li>
-							<li><a href="/index/titleinfo/id/426" target="_blank"
-								title="上传图片旋转问题">上传图片旋转问题</a></li>
-							<li><a href="/index/titleinfo/id/430" target="_blank"
-								title="phpqrcode生成二维码">phpqrcode生成二维码</a></li>
-							<li><a href="/index/titleinfo/id/424" target="_blank"
-								title="模拟朋友圈数据存储原理">模拟朋友圈数据存储原理</a></li>
-							<li><a href="/index/titleinfo/id/423" target="_blank"
-								title="雪一直下">雪一直下</a></li>
-							<li><a href="/index/titleinfo/id/422" target="_blank"
-								title="年年岁岁又一年">年年岁岁又一年</a></li>
+							<c:forEach items="${blogList}" var="blog" varStatus="st">
+								<li>
+									<c:if test="${st.index<6 }">
+									<a href="/index/titleinfo/id/${blog.blogId }" target="_blank" 
+										title="${blog.blogTitle }">${blog.blogTitle }</a>
+									</c:if>
+								</li>
+							</c:forEach>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<!--moreSelect end -->
-			<!--tit01 end-->
+			<!--tit01 end -->
 			<div class="archives" style="display: none;">
 				<h3>归档</h3>
 				<ul class="archives-list">
@@ -424,7 +407,7 @@
 		</div>
 		<div>
 			Copyright © 2016 <a href="http://www.yezismile.com/" target="_blank"
-				www.yezismile.com</a> All rights reserved. 京ICP备15029736号-1
+				www.yezismile.com</a> All rights reserved. 鲁ICP备17028276号-1
 		</div>
 	</div>
 	<!-- ************ - end Footer - 250*200 ************ -->

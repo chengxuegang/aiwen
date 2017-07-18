@@ -23,7 +23,7 @@ a:hover { text-decoration: none; }
 /*.logo { width: 1000px; height: 170px; margin: 30px auto; overflow: hidden; clear: both }*/
 .logo { height: 170px; overflow: hidden; clear: both; background:#fffbf0 url(../images/new_top-min.jpg) scroll no-repeat; background-size: cover; -moz-background-size: cover;  -webkit-background-size: cover;}
 /*这行需要改进的*/
-#topnav { width: 100%; background: #BFAB86; height: 50px; line-height: 47px; /*margin-top: 140px;*/}
+#topnav { width: 100%; background: #10193C; height: 50px; line-height: 47px; /*margin-top: 140px;*/}
 #topnav ul { width: 1000px; margin: auto }
 #topnav a { display: inline-block; font-size: 18px; font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif; padding: 0 20px; }
 #topnav a:hover { background: #fffbf0; color: #000; border-top: 4px solid #f77825; }

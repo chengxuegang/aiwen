@@ -31,15 +31,15 @@ public class BlogMainController {
 	public ModelAndView getTopNewBlog(HttpServletRequest request,
 	         HttpServletResponse response) throws Exception {
 		RMap params = new RMap();
-		List<RMap> blogList = this.mainservice.getTopNewBlog(params);
+		//最新的10条
+		List<RMap> blogList = this.mainservice.getTopNewBlog(params,10);
 		//返回modelAndView
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("blogList", blogList);
 		
-		/*modelAndView.addObject("blogList", blogList);
-		modelAndView.addObject("blogList", blogList);
-		modelAndView.addObject("blogList", blogList);
-		request.setAttribute("dd", blogList);*/
+		//点击排行
+		List<RMap> topClick = this.mainservice.getTopClickBlog(6);
+		modelAndView.addObject("topClick", topClick);
 		//指定试图
 		modelAndView.setViewName("blog_index");
 		return modelAndView;
