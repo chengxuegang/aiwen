@@ -30,7 +30,6 @@
     </ul>
   </div>
   <div class="topbgline"></div>
-  <div class="logo"></div>
   <nav id="topnav">
     <ul>
 				<a href="/" title="首页" class="nav_first">首页</a>
@@ -43,7 +42,7 @@
     </ul>
   </nav>
 </header>
-<link rel="stylesheet" href="https://static.yezismile.com/sun/css/view.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/view.css" />
 <!--kindedit自带的代码格式化-->
 <link rel="stylesheet" href="https://static.yezismile.com/kindeditor/plugins/code/prettify.css" />
 <script  src="https://static.yezismile.com/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>

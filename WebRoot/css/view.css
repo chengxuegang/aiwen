@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+/*左文章列表*/
+.weizhi { margin: 0 0 20px 0; width: 670px; overflow: hidden }
+.weizhi  h2 { font-size: 14px; line-height: 36px; color: #666; background: url(../images/lct.png) left center no-repeat; padding-left: 30px }
+.weizhi  h2 a { font-weight: normal;color: #333; margin: 0 5px }
+.weizhi  h2 a:hover { color: #000; text-decoration: underline }
+.news_title { font-size: 24px; font-weight: 400; padding: 20px 0 10px 0; color: #38485A; }
+.news_author { width: 100%; color: #999999;  line-height: 18px;  }
+.news_author span { margin-right: 20px; padding-left: 20px }
+.au01 { background: url(../images/author2.png) no-repeat left center }
+.au02 { background: url(../images/date.png) no-repeat left center }
+.au03 b { color: #333; padding: 0 5px }
+.au04{  font-weight: normal;  }
+.news_content { line-height: 24px ;font-size: 14px;}
+.news_content p {
+    line-height: 28px;
+    margin: 10px 0;
+    text-indent: 2em;
+} 
+.news_content p img {border:0; display: block;/*width: 600px;height: 390px;*/}
+.tags a {background: #F4650E;padding: 3px 8px;margin: 0 5px 0 0;color: #fff;}
+.tags {margin: 10px 0;}
+/*share*/
+.share { margin: 20px 0 }/*分享*/
+
+/*下一页*/
+.nextpage{
+line-height: 24px;
+}
+.nextpage a{
+color: #0196E3;
+}
+.nextpage a:hover {
+color: #393939;
+}
