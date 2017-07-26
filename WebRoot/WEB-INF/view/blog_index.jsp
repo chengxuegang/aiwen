@@ -113,14 +113,14 @@
 				<div class="slide-text f_r">
 					<section class="text01">
 						<h3>
-							<a href="/index/titleinfo/id/5" target="_blank" title="关于博主">
+							<a href="#" target="_blank" title="关于博主">
 								关于博主 </a>
 						</h3>
 						<p>个人资料：半路“出家”到JAVA圈，爱看BUG，不爱搭框架的程序猿 </p>
 					</section>
 					<section class=" text02 ">
 						<h3>
-							<a href="/index/titleinfo/id/121" target="_blank" title="">
+							<a href="#" target="_blank" title="">
 								空白 部分 </a>
 						</h3>
 						<p>这里是一段待录入的描述，暂时没有想好</p>
@@ -249,11 +249,11 @@
 				<h3>关注我</h3>
 				<div class="gzwm">
 					<ul>
-						<li><a class="xlwb" href="http://weibo.com/tzk826"
+						<li><a class="xlwb" href="#"  
 							target="_blank">新浪微博</a></li>
-						<li><a class="txwb" href="http://t.qq.com/tianzhukui2010"
+						<li><a class="txwb" href="#"
 							target="_blank">腾讯微博</a></li>
-						<li><a class="wx" href="mailto:tianzhukui@126.com">邮箱</a></li>
+						<li><a class="wx" href="mailto:aiwencn@126.com">邮箱</a></li>
 					</ul>
 				</div>
 			</div>
@@ -263,7 +263,7 @@
 					<c:forEach items="${blogList}" var="blog" varStatus="st">
 						<li>
 							<c:if test="${st.index<5 }">
-							<a href="/index/titleinfo/id/${blog.blogId }" target="_blank" 
+							<a href="${pageContext.request.contextPath}/blog/detail.do?blogId=${blog.blogId }" target="_blank" 
 								title="${blog.blogTitle }">${blog.blogTitle }</a>
 							</c:if>
 						</li>
@@ -286,7 +286,7 @@
 						<ul>
 							<c:forEach items="${topClick}" var="blog">
 								<li>
-									<a href="/index/titleinfo/id/${blog.blogId }" target="_blank" title="${blog.blogTitle }">
+									<a href="${pageContext.request.contextPath}/blog/detail.do?blogId=${blog.blogId }" target="_blank" title="${blog.blogTitle }">
 										${blog.blogTitle }
 									</a>
 								</li>
@@ -298,7 +298,7 @@
 							<c:forEach items="${blogList}" var="blog" varStatus="st">
 								<li>
 									<c:if test="${st.index<6 }">
-									<a href="/index/titleinfo/id/${blog.blogId }" target="_blank" 
+									<a href="${pageContext.request.contextPath}/blog/detail.do?blogId=${blog.blogId }" target="_blank" 
 										title="${blog.blogTitle }">${blog.blogTitle }</a>
 									</c:if>
 								</li>
@@ -310,7 +310,7 @@
 							<c:forEach items="${blogList}" var="blog" varStatus="st">
 								<li>
 									<c:if test="${st.index<6 }">
-									<a href="/index/titleinfo/id/${blog.blogId }" target="_blank" 
+									<a href="${pageContext.request.contextPath}/blog/detail.do?blogId=${blog.blogId }" target="_blank" 
 										title="${blog.blogTitle }">${blog.blogTitle }</a>
 									</c:if>
 								</li>
@@ -385,14 +385,14 @@
 			<div class="links">
 				<h3>友情链接</h3>
 				<ul>
-					<li><a href="http://weibo.com/tzk826" target="_blank">叶子微博</a></li>
-					<li><a href="http://zhaojingxian.cn/" target="_blank">zhjx922博客</a></li>
-					<li><a href="http://www.viphper.com/" target="_blank">PHP学习网</a></li>
-					<li><a href="http://www.wangzhijun.com.cn/" target="_blank">王志军博客</a></li>
-					<li><a href="http://www.esoxue.com/" target="_blank">易搜学</a></li>
-					<li><a href="http://www.80le.net/" target="_blank">80乐</a></li>
-					<li><a href="http://www.zhangweisen.cn/" target="_blank">张伟森博客</a></li>
-					<li><a href="http://lovefc.cn" target="_blank">封尘博客</a></li>
+					<li><a href="#" target="_blank">aaaa</a></li>
+					<li><a href="#" target="_blank">bbb</a></li>
+					<li><a href="#" target="_blank">cccc</a></li>
+					<li><a href="#" target="_blank">ddd</a></li>
+					<li><a href="#" target="_blank">ffff</a></li>
+					<li><a href="#" target="_blank">eeee</a></li>
+					<li><a href="#" target="_blank">gggg</a></li>
+					<li><a href="#" target="_blank">tttt</a></li>
 				</ul>
 			</div>
 		</div>

@@ -62,7 +62,7 @@
     <div class="topnews weizhi">
        <h2>您现在的位置是：
           <a href="/index/index">首页</a>&nbsp;>&nbsp;
-          <a href="/memory/index?tag=3">韶华追忆</a>&nbsp;>&nbsp;
+          <a href="/memory/index?tag=3">${blogTypeName }</a>&nbsp;>&nbsp;
         </h2>
         <div class="news_title">${blogDetail.blogTitle }</div>
 	  	<div class="news_author">

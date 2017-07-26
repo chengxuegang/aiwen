@@ -39,4 +39,18 @@ public class BlogDetailDao {
 		DB.update(PublicParam.DATA_SOURCE_ID, sql.toString(), ps);
 	}
 
+	public String getBlogType(String blogType) throws DBException{
+		StringBuilder sql = new StringBuilder();
+		sql.append(" SELECT * FROM BLOG_TYPE  A WHERE A.BLOG_TYPE_ID = ?");
+		Ps ps = new Ps();
+		ps.add(blogType);
+		RMap map = DB.getMap(PublicParam.DATA_SOURCE_ID,sql.toString(), ps);
+		System.out.println(blogType);
+		String blogTypeNam = null;
+		if(map!=null){
+			blogTypeNam = map.getString("blogTypeName");
+		}
+		return blogTypeNam;
+	}
+
 }

@@ -21,5 +21,8 @@ public class BlogDetailService {
 	public void saveIp(RMap ipMap) throws Exception{
 		detailDao.saveIp(ipMap);
 	}
+	public String getBlogType(String blogType) throws Exception{
+		return detailDao.getBlogType(blogType);
+	}
 
 }

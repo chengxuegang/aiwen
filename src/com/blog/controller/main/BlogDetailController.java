@@ -27,12 +27,16 @@ public class BlogDetailController {
 			HttpServletResponse response ) throws Exception{
 		logger.info("博客明细", "blogDetail", 
 				"blogId" ,request.getParameter("blogId") );
-		String blogId = request.getParameter("blogId");
-		RMap blogDetail = detailService.getBlogDetail(blogId);
 		
+		String blogId = request.getParameter("blogId");
 		ModelAndView modelAndView = new ModelAndView();
+		
+		RMap blogDetail = detailService.getBlogDetail(blogId);
 		modelAndView.addObject("blogDetail" , blogDetail);
 		
+		//路径
+		String blogTypeName = detailService.getBlogType(blogDetail.getString("blogType"));
+		modelAndView.addObject("blogTypeName",blogTypeName);
 		//更新点击次数
 		this.detailService.updateBlogCountByBlogId(blogId);
 		
