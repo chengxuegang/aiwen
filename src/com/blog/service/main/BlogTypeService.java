@@ -1,6 +1,7 @@
 package com.blog.service.main;
 
 
+import org.rex.RMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,10 @@ public class BlogTypeService {
 	public Page getBlogOfTypeList(String blogType, int pageNum) throws Exception{
 		 
 		return blogTypeDao.getBlogOfTypeList(blogType, pageNum);
+	}
+	public String getBlogTypeName(String blogType) throws Exception{
+		RMap map = blogTypeDao.getBlogTypeName(blogType);
+		return map.getString("blogTypeName");
 	}
 
 }
