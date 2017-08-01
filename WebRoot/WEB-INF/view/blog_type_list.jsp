@@ -27,7 +27,7 @@
       <a href="/about/index" target="_blank">关于我们</a>
     </ul>
   </div>
-  <div class="logo"></div>
+
   <nav id="topnav">
    <ul>
 		<a href="/" title="首页" class="nav_first">首页</a>
@@ -40,7 +40,7 @@
 	</ul>
   </nav>
 </header>
-<link href="/sun/css/timeline.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/timeline.css"	rel="stylesheet" type="text/css" media="screen" />
 <article>
 <div class="l_box f_l">
      <div class="topnews">
@@ -124,7 +124,7 @@
     .smile_news h3 { font-size: 14px; background: url(/sun/images/r_title_bg.jpg) repeat-x center }
     .smile_news h3 p { background: #fff; width: 70px }
     .smile_news h3 span { color: #65b020 }
-    .smile_rank li { height: 25px; line-height: 25px; clear: both; padding-left: 5px; overflow: hidden; padding-left: 15px; background: url(/sun/images/li.jpg) no-repeat left center; }
+    .smile_rank li { height: 25px; line-height: 25px; clear: both; padding-left: 5px; overflow: hidden; padding-left: 15px; background: url(${pageContext.request.contextPath}/image/li.jpg) no-repeat left center; }
     .smile_rank { margin: 10px 0 }
     .smile_rank li a { color: #333; }
     .smile_rank li:first-child a {display: block;}
@@ -187,29 +187,29 @@
 <!-- ************ - end Footer - 250*200 ************ -->
 </body>
 </html>
-<script type="text/javascript" src='https://static.yezismile.com/admin/js/jquery-1.7.1.min.js'></script>
-<script type="text/javascript" src='https://static.yezismile.com/admin/js/jquery.form.js'></script>
-<script type="text/javascript" src="https://static.yezismile.com/sun/js/top.js"></script>
-<script type="text/javascript" src="https://static.yezismile.com/sun/js/jquery.lazyload.js">></script>
+<script type="text/javascript" src='${pageContext.request.contextPath }/js/jquery-1.7.1.min.js'></script>
+<script type="text/javascript" src='${pageContext.request.contextPath }/js/jquery.form.js'></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/top.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery.lazyload.js">></script>
 <!-- 叶子 -->
-<script src="https://static.yezismile.com/sun/js/jquery.rotate.js"></script>
-<script src="https://static.yezismile.com/sun/js/jquery.classyleaves.min.js?t=2"></script>
+<!-- <script src="https://static.yezismile.com/sun/js/jquery.rotate.js"></script> -->
+<!-- <script src="https://static.yezismile.com/sun/js/jquery.classyleaves.min.js?t=2"></script> -->
 <script>
-$(document).ready(function() {
-        var tree = new ClassyLeaves({
-            leaves: 30,
-            maxY: -10,
-            multiplyOnClick: true,
-            multiply: 2,
-            infinite: true,
-            speed: 4000
-        });
-        $('body').on('click', '.addLeaf', function() {
-            console.log('8');
-            tree.add(8);
-            return false;
-            });
-        });
+// $(document).ready(function() {
+//         var tree = new ClassyLeaves({
+//             leaves: 30,
+//             maxY: -10,
+//             multiplyOnClick: true,
+//             multiply: 2,
+//             infinite: true,
+//             speed: 4000
+//         });
+//         $('body').on('click', '.addLeaf', function() {
+//             console.log('8');
+//             tree.add(8);
+//             return false;
+//             });
+//         });
 </script>
 <!-- 叶子结束 -->
 <script type="text/javascript">
