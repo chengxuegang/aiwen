@@ -10,5 +10,11 @@ public class Util {
 		SimpleDateFormat df = new SimpleDateFormat(format);
 		return df.format(new Date());
 	}
-
+	//ÅÐ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ
+	public static boolean isEmpty(String str){
+		if(str == null || str.isEmpty()){
+			return true;
+		}
+		return true;
+	}
 }

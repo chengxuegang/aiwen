@@ -73,14 +73,14 @@
 				<div class="photo-slide f_l">
 					<ul>
 						<li>
-							<a href="http://www.yezismile.com/index/titleinfo/id/6" title="关于博客"> 
+							<a href="http://www.aiwen123.cn/index/titleinfo/id/6" title="关于博客"> 
 							<img src="http://static.yezismile.com/sun/images/default_img.jpg"
 								original="http://static.yezismile.com/data/photo/day_20151107/201511071744066932.jpg"
 								alt="关于博客" style="width: 540px; height: 280px;" />
 							</a>
 						</li>
 						<li>
-							<a href="http://www.yezismile.com/index/titleinfo/id/121" title="关于友情链接"> 
+							<a href="http://www.aiwen123.cn/index/titleinfo/id/121" title="关于友情链接"> 
 							<img
 								src="http://static.yezismile.com/sun/images/default_img.jpg"
 								original="http://static.yezismile.com/data/photo/day_20151107/201511071743243331.gif"
@@ -88,14 +88,14 @@
 							</a>
 						</li>
 						<li>
-							<a href="http://www.yezismile.com/index/titleinfo/id/170" title="关于淘宝屋"> 
+							<a href="http://www.aiwen123.cn/index/titleinfo/id/170" title="关于淘宝屋"> 
 							<img src="http://static.yezismile.com/sun/images/default_img.jpg"
 								original="http://static.yezismile.com/data/photo/day_20151107/201511071743053774.jpg"
 								alt="关于淘宝屋" style="width: 540px; height: 280px;" />
 							</a>
 						</li>
 						<li>
-							<a href="http://www.yezismile.com/index/titleinfo/id/5" title="关于博主"> 
+							<a href="http://www.aiwen123.cn/index/titleinfo/id/5" title="关于博主"> 
 							<img src="http://static.yezismile.com/sun/images/default_img.jpg"
 								original="http://static.yezismile.com/data/photo/day_20151107/201511071742368964.gif"
 								alt="关于博主" style="width: 540px; height: 280px;" />
@@ -139,9 +139,7 @@
 					<div class="blogs" >
 					<figure>
 							<a href="${pageContext.request.contextPath}/blog/detail.do?blogId=${blog.blogId }" title="${blog.blogTitle }" target="_blank">
-								<img src="${blog.blogImage}"
-								original="${blog.blogImage}"
-								style="width: 167.5px; height: 137px;" alt="${blog.blogLabel }">
+								<img src="${blog.blogImage}" original="${blog.blogImage}" style="width: 167.5px; height: 137px;" alt="${blog.blogLabel }">
 							</a>
 						</figure>
 						<ul>
@@ -249,10 +247,8 @@
 				<h3>关注我</h3>
 				<div class="gzwm">
 					<ul>
-						<li><a class="xlwb" href="#"  
-							target="_blank">新浪微博</a></li>
-						<li><a class="txwb" href="#"
-							target="_blank">腾讯微博</a></li>
+						<li><a class="xlwb" href="#"  target="_blank">新浪微博</a></li>
+						<li><a class="txwb" href="#" target="_blank">腾讯微博</a></li>
 						<li><a class="wx" href="mailto:aiwencn@126.com">邮箱</a></li>
 					</ul>
 				</div>
@@ -321,65 +317,7 @@
 			</div>
 			<!--moreSelect end -->
 			<!--tit01 end -->
-			<div class="archives" style="display: none;">
-				<h3>归档</h3>
-				<ul class="archives-list">
-					<span class="archives-year" style="cursor: pointer;">2017年</span>
-					<li><a>05月(2)</a></li>
-					<li><a>04月(1)</a></li>
-					<li><a>03月(4)</a></li>
-					<li><a>02月(1)</a></li>
-					<li><a>01月(4)</a></li>
-				</ul>
-				<ul class="archives-list">
-					<span class="archives-year" style="cursor: pointer;">2016年</span>
-					<li><a>12月(1)</a></li>
-					<li><a>10月(1)</a></li>
-					<li><a>09月(5)</a></li>
-					<li><a>08月(7)</a></li>
-					<li><a>07月(11)</a></li>
-					<li><a>06月(11)</a></li>
-					<li><a>05月(3)</a></li>
-					<li><a>04月(5)</a></li>
-					<li><a>03月(14)</a></li>
-					<li><a>02月(4)</a></li>
-					<li><a>01月(1)</a></li>
-				</ul>
-				<ul class="archives-list">
-					<span class="archives-year" style="cursor: pointer;">2015年</span>
-					<li><a>12月(6)</a></li>
-					<li><a>11月(6)</a></li>
-					<li><a>10月(1)</a></li>
-					<li><a>08月(1)</a></li>
-					<li><a>04月(1)</a></li>
-					<li><a>03月(1)</a></li>
-					<li><a>02月(3)</a></li>
-					<li><a>01月(1)</a></li>
-				</ul>
-				<ul class="archives-list">
-					<span class="archives-year" style="cursor: pointer;">2014年</span>
-					<li><a>12月(3)</a></li>
-					<li><a>11月(2)</a></li>
-					<li><a>10月(4)</a></li>
-					<li><a>09月(5)</a></li>
-					<li><a>08月(7)</a></li>
-					<li><a>07月(3)</a></li>
-					<li><a>06月(2)</a></li>
-					<li><a>05月(16)</a></li>
-					<li><a>04月(18)</a></li>
-					<li><a>03月(14)</a></li>
-					<li><a>02月(6)</a></li>
-					<li><a>01月(10)</a></li>
-				</ul>
-				<ul class="archives-list">
-					<span class="archives-year" style="cursor: pointer;">2013年</span>
-					<li><a>12月(21)</a></li>
-					<li><a>11月(23)</a></li>
-					<li><a>10月(13)</a></li>
-					<li><a>09月(10)</a></li>
-					<li><a>08月(7)</a></li>
-				</ul>
-			</div>
+			
 
 			<!--tit01 end-->
 			<div class="links">
@@ -406,8 +344,10 @@
 			<a id="gotop" href="javascript:void(0);" title="返回顶部"></a>
 		</div>
 		<div>
-			Copyright © 2016 <a href="http://www.yezismile.com/" target="_blank"
-				www.yezismile.com</a> All rights reserved. 鲁ICP备17028276号-1
+			Copyright © 2016 
+			<a href="http://www.aiwen123.cn/" target="_blank">
+				www.aiwen123.cn
+			</a> All rights reserved. 鲁ICP备17028276号-1
 		</div>
 	</div>
 	<!-- ************ - end Footer - 250*200 ************ -->
@@ -418,11 +358,11 @@
 <script type="text/javascript"
 	src='${pageContext.request.contextPath }/js/jquery-1.7.1.min.js'></script>
 <script type="text/javascript"
-	src='http://static.yezismile.com/admin/js/jquery.form.js'></script>
+	src='${pageContext.request.contextPath }/js/jquery.form.js'></script>
 <script type="text/javascript"
-	src="http://static.yezismile.com/sun/js/top.js"></script>
+	src="${pageContext.request.contextPath }/js/top.js"></script>
 <script type="text/javascript"
-	src="http://static.yezismile.com/sun/js/jquery.lazyload.js">></script>
+	src="h${pageContext.request.contextPath }/js/jquery.lazyload.js"></script>
 <script type="text/javascript">
  
     //后加载
@@ -458,7 +398,7 @@
     });
     function getShow(obj) {
         //console.log($(obj).parents('div.topnews').find('div.blogs').size());
-        var getAjaxUrl = 'http://www.yezismile.com/index/more';
+        var getAjaxUrl = 'http://www.aiwen123.cn/index/more';
         //console.log(newPage);
         var data = {page:newPage};
         if (click_page_flag == 0) {return false;}
@@ -490,4 +430,4 @@
           }});
     };
 
-</script>
+</script>//

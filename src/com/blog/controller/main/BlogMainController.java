@@ -19,7 +19,7 @@ import com.blog.service.main.MainService;
 public class BlogMainController {
 	Logger logger = LoggerFactory.getLogger(BlogMainController.class);
 	
-	 @Autowired
+	@Autowired
 	private MainService mainservice;
 	@RequestMapping("/main")
 	public String mainPage(){

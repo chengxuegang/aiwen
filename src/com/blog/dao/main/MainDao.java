@@ -9,15 +9,16 @@ import org.rex.db.exception.DBException;
 import org.springframework.stereotype.Repository;
 
 import com.blog.util.PublicParam;
+import com.blog.util.Util;
 @Repository("mainDao")
 public class MainDao {
 
 	public List<RMap> getTopNewBlog(RMap param, int limit) throws DBException{
 		
+		Ps ps =new Ps();
 		StringBuilder sql = new StringBuilder();
 		sql.append(" SELECT * FROM T_BLOG A WHERE 1=1 ");
 		sql.append(" ORDER BY CREATE_TIME DESC  LIMIT ? ");
-		Ps ps =new Ps();
 		ps.add(limit);
 		return DB.getMapList(PublicParam.DATA_SOURCE_ID, sql.toString(), ps);
 	}
