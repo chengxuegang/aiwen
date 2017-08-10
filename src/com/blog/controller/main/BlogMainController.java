@@ -30,6 +30,7 @@ public class BlogMainController {
 	@RequestMapping("/getTopTewBlog")
 	public ModelAndView getTopNewBlog(HttpServletRequest request,
 	         HttpServletResponse response) throws Exception {
+		System.out.println("aaa");
 		RMap params = new RMap();
 		//最新的10条
 		List<RMap> blogList = this.mainservice.getTopNewBlog(params,10);
