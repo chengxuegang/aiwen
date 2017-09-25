@@ -75,7 +75,7 @@
 						<li>
 							<a href="http://www.aiwen123.cn/index/titleinfo/id/6" title="关于博客"> 
 							<img src="http://static.yezismile.com/sun/images/default_img.jpg"
-								original="http://static.yezismile.com/data/photo/day_20151107/201511071744066932.jpg"
+								original="${pageContext.request.contextPath}/image/201511071743243331.gif"
 								alt="关于博客" style="width: 540px; height: 280px;" />
 							</a>
 						</li>
@@ -83,21 +83,21 @@
 							<a href="http://www.aiwen123.cn/index/titleinfo/id/121" title="关于友情链接"> 
 							<img
 								src="http://static.yezismile.com/sun/images/default_img.jpg"
-								original="http://static.yezismile.com/data/photo/day_20151107/201511071743243331.gif"
+								original="${pageContext.request.contextPath}/image/201511071743243331.gif"
 								alt="关于友情链接" style="width: 540px; height: 280px;" />
 							</a>
 						</li>
 						<li>
 							<a href="http://www.aiwen123.cn/index/titleinfo/id/170" title="关于淘宝屋"> 
 							<img src="http://static.yezismile.com/sun/images/default_img.jpg"
-								original="http://static.yezismile.com/data/photo/day_20151107/201511071743053774.jpg"
+								original="${pageContext.request.contextPath}/image/201511071743243331.gif"
 								alt="关于淘宝屋" style="width: 540px; height: 280px;" />
 							</a>
 						</li>
 						<li>
 							<a href="http://www.aiwen123.cn/index/titleinfo/id/5" title="关于博主"> 
 							<img src="http://static.yezismile.com/sun/images/default_img.jpg"
-								original="http://static.yezismile.com/data/photo/day_20151107/201511071742368964.gif"
+								original="${pageContext.request.contextPath}/image/201511071743243331.gif"
 								alt="关于博主" style="width: 540px; height: 280px;" />
 							</a>
 						</li>
@@ -130,9 +130,7 @@
 
 			<div class="topnews">
 				<h2>
-					<span> <a href="/memory/index?tag=3" target="_blank">韶华追忆(220)</a>
-						<a href="/memory/index?tag=12" target="_blank">技术分享(27)</a>
-					</span> <b>最新</b>文章
+					<b>最新</b>文章
 				</h2>
 				
 				<c:forEach items="${blogList}" var="blog">
@@ -358,7 +356,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery.form.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath }/js/top.js"></script>
-<script type="text/javascript" src="h${pageContext.request.contextPath }/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery.lazyload.js"></script>
 <script type="text/javascript">
  
     //后加载
