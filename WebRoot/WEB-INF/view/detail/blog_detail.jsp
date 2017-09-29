@@ -90,13 +90,14 @@
 				<div class="news_title">${blogDetail.blogTitle }</div>
 				<div class="news_author">
 					<!-- 	  		<span class="au01"></span> -->
-					<span class="au02"><fmt:formatDate
-							value="${blogDetail.createTime }" pattern="yyyy-MM-dd HH:mm:ss" /></span>
+					<span class="au02">
+						<fmt:formatDate value="${blogDetail.createTime }" pattern="yyyy-MM-dd HH:mm:ss" />
+					</span>
 				</div>
 				<div class="news_content">
-					<p>${blogDetail.blogContent }</p>
+					<pre>${blogDetail.blogContent }</pre>
 					<p style="text-indent: 2em;" align="center">
-						<img src="${blogDetail.blogImage }" alt="" />
+						<img src="${pageContext.request.contextPath}/${blogDetail.blogImage }" alt="" />
 					</p>
 					</p>
 

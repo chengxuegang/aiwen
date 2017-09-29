@@ -43,4 +43,11 @@
 .whyclose{width:16px;height:16px;line-height:16px;position:absolute;right:5px;top:5px;color:#999;text-decoration:none;font-size:16px;display:block;cursor:pointer}
 .whyclose a:hover{text-decoration:none}
 .cwy_share_float .w_newTop{position:fixed;left:50%;top:50%;margin:-160px 0 0 -132px;width:265px;height:321px;z-index:999}
+pre{
+white-space:pre-wrap;
+white-space:-moz-pre-wrap;
+white-space:-pre-wrap;
+white-space:-o-pre-wrap;
+word-wrap:break-word;
+}
 

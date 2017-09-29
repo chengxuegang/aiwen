@@ -24,4 +24,5 @@
 	</bean>
 	
 	<mvc:resources location="/css/" mapping="/css/**" />       
+	<mvc:resources location="/image/" mapping="/image/**" />       
 </beans>    
