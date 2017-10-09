@@ -31,4 +31,10 @@ public class MainDao {
 		ps.add(limit);
 		return DB.getMapList(PublicParam.DATA_SOURCE_ID, sql.toString(), ps);
 	}
+
+	public List<RMap> getBlogType() throws DBException{
+		StringBuilder sql = new StringBuilder();
+		sql.append(" SELECT * FROM BLOG_TYPE WHERE 1=1  ");
+		return DB.getMapList(PublicParam.DATA_SOURCE_ID, sql.toString());
+	}
 }

@@ -18,4 +18,7 @@ public class MainService {
 		
 		return mainDao.getTopClickBlog(limit);
 	}
+	public List<RMap> getBlogType() throws Exception{
+		return mainDao.getBlogType();
+	}
 }
