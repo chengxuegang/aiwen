@@ -1,4 +1,4 @@
-package com.org.admin.pub;
+package com.blog.org.admin.pub;
 
 import java.util.Enumeration;
 import java.util.List;
@@ -10,13 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 import org.rex.RMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.alibaba.fastjson.JSONObject;
-
+@Controller
 public class PublicMethod {
 	@Autowired
 	private PublicService publicService = new PublicService();
 
+	@RequestMapping("/public/getCollect")
 	// 查询集合信息
 	public String getCollect(HttpServletRequest request, HttpServletResponse response 
 			 ) throws Exception {

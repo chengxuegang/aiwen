@@ -1,4 +1,4 @@
-package com.org.admin.pub;
+package com.blog.org.admin.pub;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,13 +6,14 @@ import java.util.List;
 import org.rex.DB;
 import org.rex.RMap;
 import org.rex.db.Ps;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.blog.controller.main.PublicDao;
 
 
-
+@Service("publicService")
 public class PublicService {
-	
+	@Autowired
 	private PublicDao publicDao = new PublicDao();
 
 	public List<RMap> getCollect(String key, RMap view) throws Exception{

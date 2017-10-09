@@ -37,22 +37,9 @@
 		<nav id="topnav">
 			<ul>
 				<a href="${pageContext.request.contextPath}/getTopTewBlog.do" title="首页" class="nav_first">首页</a>
-				<a class="nav_4"
-					href="${pageContext.request.contextPath}/blogType.do?blogType=002"
-					title="BUG本">BUG本</a>
-				<a class="nav_3"
-					href="${pageContext.request.contextPath}/blogType.do?blogType=003"
-					title="沉思者">沉思者</a>
-				<!--             <a class="nav_12"  href="/memory/index?tag=12"  title="技术分享">技术分享</a>  -->
-				<a class="nav_18"
-					href="${pageContext.request.contextPath}/blogType.do?blogType=004"
-					title="淘宝小屋">淘宝广告</a>
-				<a class="nav_16"
-					href="${pageContext.request.contextPath}/blogType.do?blogType=005"
-					title="Blog留言">Blog留言</a>
-				<a class="nav_1"
-					href="${pageContext.request.contextPath}/blogType.do?blogType=006"
-					title="关于我">关于我</a>
+				<c:forEach items="${typeList}" var="tmp" varStatus="st">
+					<a class="nav_${tmp.blogTypeIndex }" href="${pageContext.request.contextPath}/blogType.do?blogType=${ tmp.blogTypeId}" title="${ tmp.blogTypeName }">${ tmp.blogTypeName }</a>
+				</c:forEach>
 			</ul>
 		</nav>
 	</header>

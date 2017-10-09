@@ -1,3 +1,53 @@
+//Ajax提交表单
+$.fn.ajaxsubmit=function(successfun){
+	var form=this;
+	var action=form.attr('action');
+	if(!action){
+		alert("请您先设置提交路径form.action");
+		return false;
+	}
+	var params = $(form).serialize();
+	$.submit(action, params, successfun);
+}
+
+//Ajax请求
+$.submit=function(url, params, successfun){
+	$.ajax({
+		url: url,
+		cache: false,
+		data: params,
+		dataType: 'text json',
+		async : false,
+		type: 'POST',
+		success: function(data,textStatus,jqXHR){
+			//后台发生了异常
+			if(data.exception){
+				alert('执行请求时发生了异常\n<br/>'+data.message, 'error');
+				return;
+			}
+			//后台发生了错误
+			if(data.error){
+				alert('执行请求时发生了错误\n<br/>'+data.message, 'error');
+				return;
+			}
+			//成功执行
+			if(successfun){
+				successfun(data,textStatus,jqXHR);
+			}
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrown){
+			alert('请求未能成功执行\n<br/>'+textStatus, 'error');
+		}
+	});
+};
+
+//XXX:临时
+$.notify = function(text, type) {
+	type = type || 'maroon';
+	top.Notify(text, 'top-right', 5000, type, 'fa-info-circle', true);
+};
+
+
 util = {
 	// 集合
 	_optionsCache: {},
@@ -11,7 +61,7 @@ util = {
 		collKey = $.toJSON(param);
 		var options = this._optionsCache[collKey];
 		if(!options || refresh){
-			$.submit("org.w11.acl.admin.pub.PublicCmd.html?method=getCollect", param, function(data){
+			$.submit("http://127.0.0.1:7001/aiwen/public/getCollect.do", param, function(data){
 				options = data;
 			});
 		}
@@ -75,7 +125,7 @@ util = {
 		if(!map || refresh){
 			var param = {};
 			param.key = paramKey;
-			$.submit("org.w11.acl.admin.pub.PublicCmd.html?method=getSystemParam", param, function(data){
+			$.submit("http://127.0.0.1:7001/aiwen/public.do", param, function(data){
 				map = data;
 			});
 		}
@@ -113,3 +163,4 @@ util = {
         return c
 	}
 };
+

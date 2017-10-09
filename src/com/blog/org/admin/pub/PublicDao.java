@@ -1,4 +1,4 @@
-package com.blog.controller.main;
+package com.blog.org.admin.pub;
 
 import java.util.List;
 
@@ -6,19 +6,23 @@ import org.rex.DB;
 import org.rex.RMap;
 import org.rex.db.Ps;
 import org.rex.db.exception.DBException;
+import org.springframework.stereotype.Repository;
 
+import com.blog.util.PublicParam;
+
+@Repository("publicDao")
 public class PublicDao {
 
 
 	//--------------------------------collection----------------------------
 	public RMap getSQLColl(String key) throws DBException{
 		StringBuffer sql = new StringBuffer();
-		sql.append("SELECT SQL_ID, SQL_KEY, SQL, DATASOURCE_ID");
+		sql.append("SELECT SQL_ID, SQL_KEY, `SQL`, DATASOURCE_ID");
 		sql.append("   FROM W11_INIT_COLL_SQL");
 		sql.append("  WHERE SQL_KEY = ?");
 		Ps ps = new Ps();
 		ps.add(key);
-		return DB.getMap(sql.toString(), ps);
+		return DB.getMap(PublicParam.DATA_SOURCE_ID, sql.toString(), ps);
 	}
 	
 	public List<RMap> getSQLParamList(String sqlId) throws DBException{
@@ -30,7 +34,7 @@ public class PublicDao {
 		
 		Ps ps = new Ps();
 		ps.add(sqlId);
-		return DB.getMapList(sql.toString(), ps);
+		return DB.getMapList(PublicParam.DATA_SOURCE_ID,sql.toString(), ps);
 	}
 	
 	public RMap getEnumColl(String key) throws DBException{
@@ -41,7 +45,7 @@ public class PublicDao {
 		
 		Ps ps = new Ps();
 		ps.add(key);
-		return DB.getMap(sql.toString(), ps);
+		return DB.getMap(PublicParam.DATA_SOURCE_ID, sql.toString(), ps);
 	}
 	
 	public List<RMap> getEnumParamList(String enumId) throws DBException{
@@ -53,7 +57,7 @@ public class PublicDao {
 		
 		Ps ps = new Ps();
 		ps.add(enumId);
-		return DB.getMapList(sql.toString(), ps);
+		return DB.getMapList(PublicParam.DATA_SOURCE_ID,sql.toString(), ps);
 	}
 	
 	

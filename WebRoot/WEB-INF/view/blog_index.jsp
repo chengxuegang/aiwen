@@ -15,6 +15,8 @@
 <link href="${pageContext.request.contextPath}/image/favicon.ico"	rel="shortcut icon" />
 <link href="${pageContext.request.contextPath}/css/base.css"	rel="stylesheet" type="text/css" media="screen" />
 <link href="${pageContext.request.contextPath}/css/index.css"	rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/public.js"></script>
 <!--[if lt IE 9]>
 <script src="http://static.yezismile.com/sun/js/modernizr.js"></script>
 <![endif]-->
@@ -32,12 +34,9 @@
 		<nav id="topnav">
 			<ul>
 				<a href="/" title="首页" class="nav_first">首页</a>
-				<a class="nav_4" href="${pageContext.request.contextPath}/blogType.do?blogType=002" title="BUG本">BUG本</a>
-				<a class="nav_3" href="${pageContext.request.contextPath}/blogType.do?blogType=003" title="沉思者">沉思者</a>
-				<!--             <a class="nav_12"  href="/memory/index?tag=12"  title="技术分享">技术分享</a>  -->
-				<a class="nav_18" href="${pageContext.request.contextPath}/blogType.do?blogType=004" title="淘宝小屋">淘宝广告</a>
-				<a class="nav_16" href="${pageContext.request.contextPath}/blogType.do?blogType=005" title="Blog留言">Blog留言</a>
-				<a class="nav_1" href="${pageContext.request.contextPath}/blogType.do?blogType=006" title="关于我">关于我</a>
+				<c:forEach items="${typeList}" var="tmp" varStatus="st">
+					<a class="nav_${tmp.blogTypeIndex }" href="${pageContext.request.contextPath}/blogType.do?blogType=${ tmp.blogTypeId}" title="${ tmp.blogTypeName }">${ tmp.blogTypeName }</a>
+				</c:forEach>
 			</ul>
 		</nav>
 	</header>
@@ -149,7 +148,14 @@
 								${blog.blogContent }
 							</p>
 							<p class="autor">
-								<span class="lm f_l"><a href="/">${blog.blogType }</a></span> 
+								<span class="lm f_l"><a href="/">
+									<script type="text/javascript">
+										function(){
+											return util.getOptionText("blogTypeSqlColl",'${blog.blogType}');
+										}
+										
+									</script>
+									</a></span> 
 								<span class="dtime f_l"> 
 									<fmt:formatDate value="${blog.createTime }"  pattern="yyyy-MM-dd HH:mm:ss" />
 								</span> 
