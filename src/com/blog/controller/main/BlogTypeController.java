@@ -46,6 +46,10 @@ public class BlogTypeController {
 		modelAndView.addObject("pageData" ,page);
 		System.out.println(page);
 		
+		//类别
+		List<RMap> typeList = this.mainservice.getBlogType();
+		modelAndView.addObject("typeList", typeList);
+		
 		RMap params = new RMap();
 		//最新的6条
 		List<RMap> blogList = this.mainservice.getTopNewBlog(params,6);
