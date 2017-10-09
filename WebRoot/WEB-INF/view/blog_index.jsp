@@ -16,7 +16,12 @@
 <link href="${pageContext.request.contextPath}/css/base.css"	rel="stylesheet" type="text/css" media="screen" />
 <link href="${pageContext.request.contextPath}/css/index.css"	rel="stylesheet" type="text/css" media="screen" />
 
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery.form.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/top.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/public.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.json.js"></script>
 <!--[if lt IE 9]>
 <script src="http://static.yezismile.com/sun/js/modernizr.js"></script>
 <![endif]-->
@@ -132,7 +137,7 @@
 					<b>最新</b>文章
 				</h2>
 				
-				<c:forEach items="${blogList}" var="blog">
+				<c:forEach items="${blogList}" var="blog" varStatus="st">
 					<div class="blogs" >
 					<figure>
 							<a href="${pageContext.request.contextPath}/blog/detail.do?blogId=${blog.blogId }" title="${blog.blogTitle }" target="_blank">
@@ -148,11 +153,11 @@
 								${blog.blogContent }
 							</p>
 							<p class="autor">
-								<span class="lm f_l"><a href="/">
+								<span class="lm f_l"><a href="${pageContext.request.contextPath}/blogType.do?blogType=${blog.blogType}">
+									<span id="blogType${st.index }"></span>
 									<script type="text/javascript">
-										function(){
-											return util.getOptionText("blogTypeSqlColl",'${blog.blogType}');
-										}
+										var result = util.getOptionText("blogTypeSqlColl",'${blog.blogType}');
+										 $("#blogType${st.index} ").append(result);
 										
 									</script>
 									</a></span> 
@@ -358,11 +363,6 @@
 </body>
 </html>
 
-
-<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery.form.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath }/js/top.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery.lazyload.js"></script>
 <script type="text/javascript">
  
     //后加载

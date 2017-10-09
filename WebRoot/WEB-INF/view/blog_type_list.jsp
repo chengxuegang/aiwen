@@ -14,10 +14,14 @@
 <meta itemprop="name" content="分享工作经验和生活,值得大家收藏的原创博客网站。" />
 <link href="${pageContext.request.contextPath}/image/favicon.ico"
 	rel="shortcut icon" />
-<link href="${pageContext.request.contextPath}/css/base.css"
-	rel="stylesheet" type="text/css" media="screen" />
-<link href="${pageContext.request.contextPath}/css/index.css"
-	rel="stylesheet" type="text/css" media="screen" />
+<link href="${pageContext.request.contextPath}/css/base.css"	rel="stylesheet" type="text/css" media="screen" />
+<link href="${pageContext.request.contextPath}/css/index.css"	rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript"	src="${pageContext.request.contextPath }/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript"	src="${pageContext.request.contextPath }/js/jquery.form.js"></script>
+<script type="text/javascript"	src="${pageContext.request.contextPath }/js/top.js"></script>
+<script type="text/javascript"	src="${pageContext.request.contextPath }/js/jquery.lazyload.js"></script>
+<script type="text/javascript"	src="${pageContext.request.contextPath }/js/jquery.json.js"></script>
+<script type="text/javascript"	src="${pageContext.request.contextPath }/js/public.js"></script>
 <!--[if lt IE 9]>
 <script src="https://static.yezismile.com/sun/js/modernizr.js"></script>
 <![endif]-->
@@ -54,7 +58,7 @@
 						target="_blank">返回首页&gt;&gt;</a>
 					</span> <b>${blogTypeName }</b>
 				</h2>
-				<c:forEach items="${pageData.list}" var="blog">
+				<c:forEach items="${pageData.list}" var="blog" varStatus="st">
 					<div class="blogs" >
 					<figure>
 							<a href="${pageContext.request.contextPath}/blog/detail.do?blogId=${blog.blogId }" title="${blog.blogTitle }" target="_blank">
@@ -70,7 +74,16 @@
 								${blog.blogContent }
 							</p>
 							<p class="autor">
-								<span class="lm f_l"><a href="/">${blog.blogType }</a></span> 
+								<span class="lm f_l">
+									<a href="${pageContext.request.contextPath}/blogType.do?blogType=${blog.blogType}">
+									<span id="blogType${st.index }"></span>
+										<script type="text/javascript">
+											var result = util.getOptionText("blogTypeSqlColl",'${blog.blogType}');
+											 $("#blogType${st.index} ").append(result);
+											
+										</script>
+									</a>
+								</span> 
 								<span class="dtime f_l"> 
 									<fmt:formatDate value="${blog.createTime }"  pattern="yyyy-MM-dd HH:mm:ss" />
 								</span> 
@@ -215,14 +228,7 @@
 	<!-- ************ - end Footer - 250*200 ************ -->
 </body>
 </html>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath }/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath }/js/jquery.form.js"></script>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath }/js/top.js"></script>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath }/js/jquery.lazyload.js"></script>
+
 <!-- 叶子 -->
 <!-- <script src="https://static.yezismile.com/sun/js/jquery.rotate.js"></script> -->
 <!-- <script src="https://static.yezismile.com/sun/js/jquery.classyleaves.min.js?t=2"></script> -->
